@@ -1,0 +1,43 @@
+{
+  "name": "Search",
+  "plural": "/search",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "search": {
+      "accepts": [
+        {
+          "arg": "query",
+          "type": "string",
+          "required": true,
+          "description": "",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [
+        {
+          "arg": "root",
+          "type": "any",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "search data in common models",
+      "http": [
+        {
+          "path": "/",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}
